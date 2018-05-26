@@ -1,7 +1,8 @@
 <?php
 
-$channelSecret = '551ec4feee0.....43cff0';
-$access_token  = '2og9ogezC8k.......5ZUEQQdB04t89/1O/w1cDnyilFU=';
+$channelSecret = '45c7d0c08388a9499cc434c975a4898a
+';
+$access_token  = '9b8Kvo72cNV+WCaYMPLzdQpYCpjCWtANVmdgs/koNKIAunT0CtAD4p2NYDallTCdC+gpL44kRY+YyMjYE9YTOdVoJZTAcX/kHyydVODzsQEsWUR0AP92ZBXC8/Kk9tImGYVEwn2UkFir/GF1XObPQAdB04t89/1O/w1cDnyilFU=';
 
 $bot = new BOT_API($channelSecret, $access_token);
   
