@@ -1,5 +1,5 @@
 <?php // callback.php
-input 'tt.php';
+include 'tt.php';
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
@@ -25,7 +25,6 @@ if (!is_null($events['events'])) {
 			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
