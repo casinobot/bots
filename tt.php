@@ -23,5 +23,5 @@ echo curl_error($ch);
 curl_close($ch);
 $jsuser=json_decode($result, true);
 echo "ok tt2<br>";
-echo $jsuser;
+print_r($jsuser);
 ?>
