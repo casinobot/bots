@@ -21,7 +21,7 @@ if (!is_null($events['events'])) {
 			if($event['message']['text']=="play"){
 				$u_id=$event['source']['userId'];
 				$re=regPlay($u_id);
-				$text+=$re;
+				$text=$text.$re;
 			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
