@@ -18,7 +18,8 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			// $text = "สวัสดี : ".$event['source']['userId']."-->".$event['message']['text'];
 			$text="สวัสดี";
-			$re=regPlay();
+			$aa="Aone WW"
+			$re=regPlay($aa);
 			$text=$text."คุณ :".$re;
 			/*if($event['message']['text']=="play"){
 				$u_id=$event['source']['userId'];
