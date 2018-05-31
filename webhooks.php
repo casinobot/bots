@@ -1,5 +1,5 @@
 <?php // callback.php
-
+input 'tt.php';
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
@@ -9,6 +9,7 @@ $access_token = '9b8Kvo72cNV+WCaYMPLzdQpYCpjCWtANVmdgs/koNKIAunT0CtAD4p2NYDallTC
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
+$text;
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -16,7 +17,14 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = "สวัสดี : ".$event['source']['userId']."-->".$event['message']['text'];
+			// $text = "สวัสดี : ".$event['source']['userId']."-->".$event['message']['text'];
+			
+			if($event['message']['text']=="play"){
+				$text=regPlay($event['source']['userId']);
+			}
+
+
+
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
