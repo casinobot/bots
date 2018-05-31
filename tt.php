@@ -13,11 +13,12 @@ $uid="U1cc479767864cf8c57629e6b1623e2f6";
 $url = 'https://api.line.me/v2/bot/profile/'.$uid;
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 $ch = curl_init($url);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+/*curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+*/
 $result = curl_exec($ch);
 echo curl_error($ch);
 curl_close($ch);
