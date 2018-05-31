@@ -40,6 +40,7 @@ function regPlay($uid){
   // echo curl_error($ch);
   curl_close($ch);
   $jsuser=json_decode($result, true);
+  echo $jsuser['displayName'];
   return $jsuser['displayName'];
   // echo "ok tt2<br>";
   // print_r($jsuser);
