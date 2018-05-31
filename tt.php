@@ -26,8 +26,8 @@ $events = json_decode($content, true);
 // echo "ok tt2<br>";
 // print_r($jsuser);
 // echo "<br><br>".$jsuser['displayName']."<br>";
-function regPlay(){
-  $re="Aone";
+function regPlay($st){
+  $re=$st";
   return $re;
 }
 /*function regPlay($uid){
