@@ -27,7 +27,7 @@ $events = json_decode($content, true);
 // print_r($jsuser);
 // echo "<br><br>".$jsuser['displayName']."<br>";
 function regPlay($st){
-  $re=$st";
+  $re=this.$st";
   return $re;
 }
 /*function regPlay($uid){
