@@ -44,4 +44,5 @@ function regPlay($uid){
   // echo "ok tt2<br>";
   // print_r($jsuser);
 }
+echo "tt ok";
 ?>
