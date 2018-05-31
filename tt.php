@@ -46,7 +46,7 @@ function regPlay($uid){
   curl_close($ch);
   $jsuser=json_decode($result, true);
 //   echo $jsuser['displayName'];
-  $user="Aone-->".$uid."-->".$jsuser['displayName'];
+  $user="Aone-->".$jsuser[displayName]."-->".$uid;
   return $user;
   // print_r($jsuser);
 }
