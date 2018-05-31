@@ -31,8 +31,8 @@ function regPlayas($st){
   return $re;
 }
 function regPlay($uid){
-  // $uid="U1cc479767864cf8c57629e6b1623e2f6";
-  $url = 'https://api.line.me/v2/bot/profile/'.$uid;
+  $uids="U1cc479767864cf8c57629e6b1623e2f6";
+  $url = 'https://api.line.me/v2/bot/profile/'.$uids;
   $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
