@@ -21,5 +21,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 echo curl_error($ch);
 curl_close($ch);
-echo "ok tt";
+$jsuser=json_decode($result, true);
+echo "ok tt<br>";
+echo $jsuser;
 ?>
