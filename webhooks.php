@@ -1,5 +1,5 @@
 <?php // callback.php
-include 'tt.php';
+//include 'tt.php';
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
@@ -17,15 +17,12 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			// $text = "สวัสดี : ".$event['source']['userId']."-->".$event['message']['text'];
-			$text="สวัสดี";
-			$aa="Aone WW"
-			$re=regPlay();
-			$text=$text."คุณ :".$re;
-			/*if($event['message']['text']=="play"){
-				$u_id=$event['source']['userId'];
-				$re=regPlay($u_id);
-				$text=$text."คุณ :".$re;
-			}*/
+			$text="สวัสดี : ";
+			// if($event['message']['text']=="play"){
+			// 	$u_id=$event['source']['userId'];
+			// 	$re=regPlay($u_id);
+			// 	$text=$text.$re;
+			// }
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
