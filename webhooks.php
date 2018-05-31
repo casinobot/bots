@@ -18,11 +18,13 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			// $text = "สวัสดี : ".$event['source']['userId']."-->".$event['message']['text'];
 			$text="สวัสดี";
-			if($event['message']['text']=="play"){
+			$re=regPlay();
+			$text=$text."คุณ :".$re;
+			/*if($event['message']['text']=="play"){
 				$u_id=$event['source']['userId'];
 				$re=regPlay($u_id);
 				$text=$text."คุณ :".$re;
-			}
+			}*/
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
