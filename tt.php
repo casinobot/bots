@@ -26,11 +26,11 @@ $events = json_decode($content, true);
 // echo "ok tt2<br>";
 // print_r($jsuser);
 // echo "<br><br>".$jsuser['displayName']."<br>";
-function regPlay($st){
+function regPlayas($st){
   $re=$st;
   return $re;
 }
-/*function regPlay($uid){
+function regPlay($uid){
   // $uid="U1cc479767864cf8c57629e6b1623e2f6";
   $url = 'https://api.line.me/v2/bot/profile/'.$uid;
   $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
@@ -41,13 +41,13 @@ function regPlay($st){
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
   $result = curl_exec($ch);
-  // echo curl_error($ch);
+  echo curl_error($ch);
   curl_close($ch);
   $jsuser=json_decode($result, true);
-  echo $jsuser['displayName'];
-  return $jsuser['displayName'];
-  // echo "ok tt2<br>";
+//   echo $jsuser['displayName'];
+  $user=$jsuser['displayName'];;
+  return $user;
   // print_r($jsuser);
-}*/
+}
 echo "tt ok";
 ?>
