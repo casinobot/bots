@@ -32,7 +32,7 @@ function regPlay($uid){
   header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user='.$u_id.'&name='.$name.'&urlpic='.$urlpic.'&statMsg='.$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $user=$uid;
-  return $user;
+  return $name;
 }
 echo "tt ok";
 ?>
