@@ -34,5 +34,5 @@ function regPlay($uid){
   $user=$uid;
   return $user;
 }
-echo "tt ok1";
+echo "tt ok";
 ?>
