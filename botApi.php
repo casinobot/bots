@@ -29,10 +29,10 @@ function regPlay($uid){
   $urlpic=$user['pictureUrl'];
   $statMsg=$user['statusMessage'];
 
-  header('Location: www.casinopanels.com/services/api.php?func="addUser"&user=$u_id&name=$name&urlpic=$urlpic&statMsg=$statMsg');
+  header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user=$u_id&name=$name&urlpic=$urlpic&statMsg=$statMsg');
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $user=$uid;
   return $user;
 }
-echo "tt ok";
+echo "tt ok1";
 ?>
