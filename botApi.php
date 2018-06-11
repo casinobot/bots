@@ -25,14 +25,14 @@ function regPlay($uid){
   $jsuser=json_decode($result, true);
 //   echo $jsuser['displayName'];
   $u_id=$jsuser['userId'];
-  $name=$user['displayName'];
-  $urlpic=$user['pictureUrl'];
-  $statMsg=$user['statusMessage'];
+  $name=$jsuser['displayName'];
+  $urlpic=$jsuser['pictureUrl'];
+  $statMsg=$jsuser['statusMessage'];
 
   header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user='.$u_id.'&name='.$name.'&urlpic='.$urlpic.'&statMsg='.$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $user=$uid;
   return $user;
 }
-echo "<br>tt ok1";
+echo "tt ok";
 ?>
