@@ -47,9 +47,9 @@ if (!is_null($events['events'])) {
                           // 'text' => $ms
                           'text' => 'groupId: '.$event['source']['groupId']
                          ];
-                         header('Location: ./api/botAdduser.php?uId='.$u_id);
-                     }
-                     
+                         echo "<script>window.location.href='./api/botAdduser.php?uId='+".$u_id."'+</script>";
+                         // header('Location: ./api/botAdduser.php?uId='.$u_id);
+                     }                     
                      break;
                 
                     default:
@@ -92,4 +92,4 @@ if (!is_null($events['events'])) {
         }
     }
 }
-echo "OK";
+echo "OK1";
