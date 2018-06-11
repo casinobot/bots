@@ -10,8 +10,8 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 function regPlay($uid){
-//   $uid="U1cc479767864cf8c57629e6b1623e2f6";
-  $url = 'https://api.line.me/v2/bot/profile/'.$uid;
+  $u_id="U1cc479767864cf8c57629e6b1623e2f6";
+  $url = 'https://api.line.me/v2/bot/profile/'.$u_id;
   $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
@@ -24,6 +24,7 @@ function regPlay($uid){
   curl_close($ch);
   $jsuser=json_decode($result, true);
 //   echo $jsuser['displayName'];
+  print_r($jsuser);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $user=$uid;
   return $user;
