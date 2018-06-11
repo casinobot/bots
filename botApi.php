@@ -23,6 +23,7 @@ $events = json_decode($content, true);
   echo curl_error($ch);
   curl_close($ch);
   $jsuser=json_decode($result, true);
+  print_r($jsuser);
 //   echo $jsuser['displayName'];
   $u_id=$jsuser['userId'];
   $name=$user['displayName'];
