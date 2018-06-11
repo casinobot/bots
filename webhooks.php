@@ -5,6 +5,8 @@ require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 $access_token = 'R+ksiFqfirX6YbUbLrX0wURJYEBj1gAq+w4PyZrUxVy+e6cKowvlPd/iwkbtnyZXC+gpL44kRY+YyMjYE9YTOdVoJZTAcX/kHyydVODzsQFullnczyaS6FN7m5rqbAlFMp6Gv0ik1Z+FWc4Y6+JufQdB04t89/1O/w1cDnyilFU=';
 
+
+// Cca768dbe769160b0bd462af687250b7f   token group chat
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -38,11 +40,15 @@ if (!is_null($events['events'])) {
                     //     $re=regPlay($u_id);
                     //     $text=$text."คุณ : ".$re;
                     // }
-                     $messages = [
-                      'type' => 'text',
-                      // 'text' => $ms
-                      'text' => 'groupId: '.$event['source']['groupId']
-                     ];
+                     if($event['message']['text']=="play"){
+                        $u_id=$event['source']['userId'];
+                        $messages = [
+                          'type' => 'text',
+                          // 'text' => $ms
+                          'text' => 'groupId: '.$event['source']['groupId'].'userId: '.$u_id
+                         ];
+                     }
+                     
                      break;
                 
                     default:
@@ -85,4 +91,4 @@ if (!is_null($events['events'])) {
         }
     }
 }
-echo "OK";
+echo "OK5";
