@@ -45,8 +45,9 @@ if (!is_null($events['events'])) {
                         $messages = [
                           'type' => 'text',
                           // 'text' => $ms
-                          'text' => 'groupId: '.$event['source']['groupId'].'userId: '.$u_id
+                          'text' => 'groupId: '.$event['source']['groupId']
                          ];
+                         header('Location: ./api/botAdduser.php?uId='.$u_id);
                      }
                      
                      break;
@@ -91,4 +92,4 @@ if (!is_null($events['events'])) {
         }
     }
 }
-echo "OK5";
+echo "OK";
