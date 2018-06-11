@@ -9,7 +9,7 @@ $access_token = 'R+ksiFqfirX6YbUbLrX0wURJYEBj1gAq+w4PyZrUxVy+e6cKowvlPd/iwkbtnyZ
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-function regPlay($uid){
+// function regPlay($uid){
   $u_id="U1cc479767864cf8c57629e6b1623e2f6";
   $url = 'https://api.line.me/v2/bot/profile/'.$u_id;
   $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
@@ -27,7 +27,7 @@ function regPlay($uid){
   print_r($jsuser);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $user=$uid;
-  return $user;
-}
+//   return $user;
+// }
 echo "tt ok";
 ?>
