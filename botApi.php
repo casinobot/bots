@@ -26,14 +26,14 @@ $events = json_decode($content, true);
   print_r($jsuser);
 //   echo $jsuser['displayName'];
   $u_id=$jsuser['userId'];
-  $name=$user['displayName'];
-  $urlpic=$user['pictureUrl'];
-  $statMsg=$user['statusMessage'];
+  $name=$jsuser['displayName'];
+  $urlpic=$jsuser['pictureUrl'];
+  $statMsg=$jsuser['statusMessage'];
 
-  echo 'Location: http://www.casinopanels.com/services/api.php?func=addUser&user=$u_id&name=$name&urlpic=$urlpic&statMsg=$statMsg';
+  echo '<br>Location: http://www.casinopanels.com/services/api.php?func=addUser&user=$u_id&name=$name&urlpic=$urlpic&statMsg=$statMsg';
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $user=$uid;
 //   return $user;
 // }
-echo "tt ok";
+echo "<br>tt ok";
 ?>
