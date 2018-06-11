@@ -29,8 +29,8 @@ $events = json_decode($content, true);
   $name=$jsuser['displayName'];
   $urlpic=$jsuser['pictureUrl'];
   $statMsg=$jsuser['statusMessage'];
-  echo "$u_id<br>$name<br>$urlpic<br>$statMsg<br>";
-  echo '<br>Location: http://www.casinopanels.com/services/api.php?func=addUser&user=$u_id&name=$name&urlpic=$urlpic&statMsg=$statMsg';
+//   echo "$u_id<br>$name<br>$urlpic<br>$statMsg<br>";
+  echo '<br>Location: http://www.casinopanels.com/services/api.php?func=addUser&user=".$u_id."&name=".$name."&urlpic=".$urlpic."&statMsg=".$statMsg';
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $user=$uid;
 //   return $user;
