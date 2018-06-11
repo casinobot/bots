@@ -9,8 +9,8 @@ $access_token = 'R+ksiFqfirX6YbUbLrX0wURJYEBj1gAq+w4PyZrUxVy+e6cKowvlPd/iwkbtnyZ
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-// function regPlay($uid){
-  $uid="U1cc479767864cf8c57629e6b1623e2f6";
+function regPlay($uid){
+//   $uid="U1cc479767864cf8c57629e6b1623e2f6";
   $url = 'https://api.line.me/v2/bot/profile/'.$uid;
   $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
   $ch = curl_init($url);
@@ -36,6 +36,6 @@ $events = json_decode($content, true);
 //   $user=$name;
 //   return $user;
   
-// }
-echo "2";
+}
+echo "1";
 ?>
