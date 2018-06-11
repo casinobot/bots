@@ -50,7 +50,7 @@ if (!is_null($events['events'])) {
                  break;                 
              }
 
-            $text="สวัสดี";
+            // $text="สวัสดี";
 //          $a_n="Aone";
 //          $re=regPlay($a_n);
 //          $text=$text."คุณ : ".$re;
@@ -85,4 +85,4 @@ if (!is_null($events['events'])) {
         }
     }
 }
-echo "OK1";
+echo "OK2";
