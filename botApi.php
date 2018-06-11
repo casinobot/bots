@@ -28,8 +28,8 @@ function regPlay($uid){
   $name=$jsuser['displayName'];
   $urlpic=$jsuser['pictureUrl'];
   $statMsg=$jsuser['statusMessage'];
-  $sqlAdduser="INSERT INTO tb_user values(null,'$name','$u_id','$urlpic','-')";
-  $queryAdduser=mysqli_query($con,$sqlAdduser);
+//   $sqlAdduser="INSERT INTO tb_user values(null,'$name','$u_id','$urlpic','-')";
+//   $queryAdduser=mysqli_query($con,$sqlAdduser);
 //   echo "<script>window.location='http://www.casinopanels.com/services/api.php?func=addUser&user=+".$u_id."+&name=+".$name."+&urlpic=+".$urlpic."+&statMsg=+".$statMsg."+';</script>";
   header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user='.$u_id.'&name='.$name.'&urlpic='.$urlpic.'&statMsg='.$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
@@ -37,5 +37,5 @@ function regPlay($uid){
 //   return $user;
   
 }
-echo "1";
+echo "2";
 ?>
