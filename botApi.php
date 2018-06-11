@@ -1,5 +1,5 @@
 <?php // callback.php
-
+include 'conn.php';
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
@@ -28,11 +28,13 @@ function regPlay($uid){
   $name=$jsuser['displayName'];
   $urlpic=$jsuser['pictureUrl'];
   $statMsg=$jsuser['statusMessage'];
-  echo "<script>window.location='http://www.casinopanels.com/services/api.php?func=addUser&user=+".$u_id."+&name=+".$name."+&urlpic=+".$urlpic."+&statMsg=+".$statMsg."+';</script>";
+  $sqlAdduser="INSERT INTO tb_user values(null,'$name','$u_id','$urlpic','-')";
+  $queryAdduser=mysqli_query($con,$sqlAdduser);
+//   echo "<script>window.location='http://www.casinopanels.com/services/api.php?func=addUser&user=+".$u_id."+&name=+".$name."+&urlpic=+".$urlpic."+&statMsg=+".$statMsg."+';</script>";
   // header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user='.$u_id.'&name='.$name.'&urlpic='.$urlpic.'&statMsg='.$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $user=$name;
   return $user;
 }
-echo "tt ok";
+echo "tt ok2";
 ?>
