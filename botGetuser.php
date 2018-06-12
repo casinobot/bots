@@ -33,5 +33,6 @@ echo "1)".$_REQUEST['uId']."<br>";
 //   header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user='.$u_id.'&name='.$name.'&urlpic='.$urlpic.'&statMsg='.$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $user=$name."\nuserId : ".$uid;
-  echo $user;
+//   echo $user;
+print_r($jsuser);
 ?>
