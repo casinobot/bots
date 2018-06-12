@@ -4,7 +4,7 @@ require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 $access_token = 'R+ksiFqfirX6YbUbLrX0wURJYEBj1gAq+w4PyZrUxVy+e6cKowvlPd/iwkbtnyZXC+gpL44kRY+YyMjYE9YTOdVoJZTAcX/kHyydVODzsQFullnczyaS6FN7m5rqbAlFMp6Gv0ik1Z+FWc4Y6+JufQdB04t89/1O/w1cDnyilFU=';
-
+$name="";
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -33,9 +33,9 @@ function regPlay($uid){
 //   echo "<script>window.location='http://www.casinopanels.com/services/api.php?func=addUser&user=+".$u_id."+&name=+".$name."+&urlpic=+".$urlpic."+&statMsg=+".$statMsg."+';</script>";
 //   header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user='.$u_id.'&name='.$name.'&urlpic='.$urlpic.'&statMsg='.$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
-  $user=(string)$name;
+  $user=$name;
   return $user;
   
 }
-echo "0";
+echo "1";
 ?>
