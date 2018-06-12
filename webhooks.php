@@ -43,13 +43,15 @@ if (!is_null($events['events'])) {
                     // }
                      if($event['message']['text']=="play"){
                         $u_id=$event['source']['userId'];
+                         $re=regPlay($u_id);
+                         $text=$text."\nคุณ : ".$re."\n".'groupId: '.$event['source']['groupId'];
+                         
                         $messages = [
                           'type' => 'text',
+                          'text' => $text
                           // 'text' => $ms
-                          'text' => 'groupId: '.$event['source']['groupId']
+//                           'text' => 'groupId: '.$event['source']['groupId']
                          ];
-                         $re=regPlay($u_id);
-                         $text=$text."\nคุณ : ".$re;
 //                          echo "<script>window.location.href='./testApi/botAdduser.php</script>";
 //                          header('Location: ./api/botAdduser.php?uId='.$u_id);
                          
@@ -99,5 +101,5 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK1";
+echo "OK";
 
