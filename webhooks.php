@@ -4,7 +4,7 @@ include 'botApi.php';
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 $access_token = 'R+ksiFqfirX6YbUbLrX0wURJYEBj1gAq+w4PyZrUxVy+e6cKowvlPd/iwkbtnyZXC+gpL44kRY+YyMjYE9YTOdVoJZTAcX/kHyydVODzsQFullnczyaS6FN7m5rqbAlFMp6Gv0ik1Z+FWc4Y6+JufQdB04t89/1O/w1cDnyilFU=';
-
+$u_id;
 
 // Cca768dbe769160b0bd462af687250b7f   token group chat
 // Get POST body content
@@ -47,8 +47,8 @@ if (!is_null($events['events'])) {
                           // 'text' => $ms
                           'text' => 'groupId: '.$event['source']['groupId']
                          ];
-                         echo "<script>window.location.href='./testApi/botAdduser.php</script>";
-                         // header('Location: ./api/botAdduser.php?uId='.$u_id);
+//                          echo "<script>window.location.href='./testApi/botAdduser.php</script>";
+                         
                      }                     
                      break;
                 
@@ -93,3 +93,4 @@ if (!is_null($events['events'])) {
     }
 }
 echo "OK";
+header('Location: ./api/botAdduser.php?uId='.$u_id);
