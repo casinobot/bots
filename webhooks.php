@@ -42,7 +42,8 @@ if (!is_null($events['events'])) {
                     //     $re=regPlay($u_id);
                     //     $text=$text."คุณ : ".$re;
                     // }
-                     if($event['message']['text']=="play"){
+                    $botMs=strtoupper($event['message']['text']);
+                     if($botMs=="PLAY"){
                         $u_id=$event['source']['userId'];
                          $re=regPlay($u_id);
                          $text=$text."คุณ : ".$re;
@@ -102,5 +103,5 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK";
+echo "OK1";
 
