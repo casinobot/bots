@@ -9,9 +9,20 @@ $access_token = 'R+ksiFqfirX6YbUbLrX0wURJYEBj1gAq+w4PyZrUxVy+e6cKowvlPd/iwkbtnyZ
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-//   $uid="U1cc479767864cf8c57629e6b1623e2f6";
-  $uid=$_REQUEST['uId'];
+  $uid="U1cc479767864cf8c57629e6b1623e2f6";
+//   $uid=$_REQUEST['uId'];
   $url = 'https://api.line.me/v2/bot/profile/'.$uid;
+  $url = 'https://api.line.me/v2/bot/message/reply';
+  $data = [
+      'replyToken' => $replyToken,
+      'messages' => [$messages],
+  ];
+  $messages = [
+    'type' => 'text',
+    // 'text' => $ms
+    'text' => 'userId: '.$event['source']['userId']
+   ];
+  $post = json_encode($data);
   $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
@@ -29,7 +40,7 @@ $events = json_decode($content, true);
   $urlpic=$jsuser['pictureUrl'];
   $statMsg=$jsuser['statusMessage'];
   // echo "<script>window.location='http://www.casinopanels.com/services/api.php?func=addUser&user=+".$u_id."+&name=+".$name."+&urlpic=+".$urlpic."+&statMsg=+".$statMsg."+';</script>";
-  header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user='.$u_id.'&name='.$name.'&urlpic='.$urlpic.'&statMsg='.$statMsg);
+//   header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user='.$u_id.'&name='.$name.'&urlpic='.$urlpic.'&statMsg='.$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
-echo "Ad user ok";
+echo "Ad user ok1";
 ?>
