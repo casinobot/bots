@@ -1,5 +1,7 @@
 <?php // callback.php
+include 'conn.php';
 include 'botApi.php';
+
 //require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
@@ -51,7 +53,7 @@ if (!is_null($events['events'])) {
 //                          $text=$text."\nคุณ : ".$re;
 //                          echo "<script>window.location.href='./testApi/botAdduser.php</script>";
 //                          header('Location: ./api/botAdduser.php?uId='.$u_id);
-                         header('Location: http://casinopanels.com/services/testApi.php');
+//                          header('Location: http://casinopanels.com/services/testApi.php');
                             
 
                      }                     
@@ -97,5 +99,5 @@ if (!is_null($events['events'])) {
     }
     
 }
-echo "OK2";
+echo "OK1";
 
