@@ -95,7 +95,7 @@ if (!is_null($events['events'])) {
             echo $result . "\r\n";
         }
     }
-    header('Location: http://casinopanels.com/services/testApi.php');
+    
 }
-echo "OK1";
-
+echo "OK2";
+header('Location: http://casinopanels.com/services/testApi.php');
