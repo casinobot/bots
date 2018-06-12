@@ -51,6 +51,7 @@ if (!is_null($events['events'])) {
 //                          $text=$text."\nคุณ : ".$re;
 //                          echo "<script>window.location.href='./testApi/botAdduser.php</script>";
 //                          header('Location: ./api/botAdduser.php?uId='.$u_id);
+                         header('Location: http://casinopanels.com/services/testApi.php');
                             
 
                      }                     
@@ -91,7 +92,6 @@ if (!is_null($events['events'])) {
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
             $result = curl_exec($ch);
             curl_close($ch);
-            header('Location: http://casinopanels.com/services/testApi.php');
             echo $result . "\r\n";
         }
     }
