@@ -33,10 +33,10 @@ function regPlay($uid){
 //   echo "<script>window.location='http://www.casinopanels.com/services/api.php?func=addUser&user=+".$u_id."+&name=+".$name."+&urlpic=+".$urlpic."+&statMsg=+".$statMsg."+';</script>";
 //   header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user='.$u_id.'&name='.$name.'&urlpic='.$urlpic.'&statMsg='.$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
-  $name=$name."null"
+  $name=$name."null";
   $user=$name."\nuserId : ".$uid;
   return $user;
   
 }
-echo "0";
+echo "2";
 ?>
