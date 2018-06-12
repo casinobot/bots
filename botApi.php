@@ -33,9 +33,9 @@ function regPlay($uid){
 //   echo "<script>window.location='http://www.casinopanels.com/services/api.php?func=addUser&user=+".$u_id."+&name=+".$name."+&urlpic=+".$urlpic."+&statMsg=+".$statMsg."+';</script>";
 //   header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user='.$u_id.'&name='.$name.'&urlpic='.$urlpic.'&statMsg='.$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
-  $user=this.$name;
-  return $user;
+//   $user=$name;
+  return $name;
   
 }
-echo "1";
+echo "0";
 ?>
