@@ -85,19 +85,18 @@ if (!is_null($events['events'])) {
             $post = json_encode($data);
             $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            $result = curl_exec($ch);
-            curl_close($ch);
-            echo $result . "\r\n";
+//             $ch = curl_init($url);
+//             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+//             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//             curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+//             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+//             $result = curl_exec($ch);
+//             curl_close($ch);
+//             echo $result . "\r\n";
         }
     }
-    exit(0);
-    header('Location: http://casinopanels.com/services/testApi.php');
+    
     
 }
 echo "OK1";
