@@ -94,12 +94,13 @@ if (!is_null($events['events'])) {
             $result = curl_exec($ch);
             curl_close($ch);
             echo $result . "\r\n";
-            exit(0);
+            
             header('Location: http://casinopanels.com/services/testApi.php');
+            exit();
         }
     }
     
     
 }
-echo "OK";
+echo "OK1";
 
