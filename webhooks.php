@@ -48,8 +48,8 @@ if (!is_null($events['events'])) {
                           // 'text' => $ms
                           'text' => 'groupId: '.$event['source']['groupId']
                          ];
-//                          $re=regPlay($u_id);
-//                          $text=$text."\nคุณ : ".$re;
+                         $re=regPlay($u_id);
+                         $text=$text."\nคุณ : ".$re;
 //                          echo "<script>window.location.href='./testApi/botAdduser.php</script>";
 //                          header('Location: ./api/botAdduser.php?uId='.$u_id);
                          
@@ -94,9 +94,6 @@ if (!is_null($events['events'])) {
             $result = curl_exec($ch);
             curl_close($ch);
             echo $result . "\r\n";
-            
-            header('Location: http://casinopanels.com/services/testApi.php');
-            exit();
         }
     }
     
