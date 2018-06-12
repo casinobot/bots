@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
                           // 'text' => $ms
                           'text' => 'groupId: '.$event['source']['groupId']
                          ];
-                         echo "<script>window.location.href='./api/botAdduser.php?uId='+".$u_id."'+</script>";
+                         echo "<script>window.location.href='./testApi/botAdduser.php</script>";
                          // header('Location: ./api/botAdduser.php?uId='.$u_id);
                      }                     
                      break;
@@ -92,4 +92,4 @@ if (!is_null($events['events'])) {
         }
     }
 }
-echo "OK1";
+echo "OK";
