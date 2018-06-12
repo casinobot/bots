@@ -1,5 +1,4 @@
 <?php // callback.php
-include 'conn.php';
 include 'botApi.php';
 
 //require "vendor/autoload.php";
