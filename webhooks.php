@@ -20,6 +20,7 @@ if (!is_null($events['events'])) {
         if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
             // Get text sent
             // $text = "สวัสดี : ".$event['source']['userId']."-->".$event['message']['text'];
+            $text="สวัสดี";
             switch ($event['source']['type']) {
                 case 'user':
                  $messages = [
@@ -44,7 +45,7 @@ if (!is_null($events['events'])) {
                      if($event['message']['text']=="play"){
                         $u_id=$event['source']['userId'];
                          $re=regPlay($u_id);
-                         $text=$text."\nคุณ : ".$re."\n".'groupId: '.$event['source']['groupId'];
+                         $text=$text."คุณ : ".$re;
                          
                         $messages = [
                           'type' => 'text',
