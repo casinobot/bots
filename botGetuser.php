@@ -35,4 +35,5 @@ echo "1)".$_REQUEST['uId']."<br>";
   $user=$name."\nuserId : ".$uid;
 //   echo $user;
 print_r($jsuser);
+echo "<br>".$jsuser['displayName'];
 ?>
