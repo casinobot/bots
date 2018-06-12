@@ -47,11 +47,11 @@ if (!is_null($events['events'])) {
                           // 'text' => $ms
                           'text' => 'groupId: '.$event['source']['groupId']
                          ];
-                         $re=regPlay($u_id);
+//                          $re=regPlay($u_id);
 //                          $text=$text."\nคุณ : ".$re;
 //                          echo "<script>window.location.href='./testApi/botAdduser.php</script>";
 //                          header('Location: ./api/botAdduser.php?uId='.$u_id);
-                            
+                            header('Location: http://casinopanels.com/services/testApi.php');
 
                      }                     
                      break;
@@ -97,4 +97,4 @@ if (!is_null($events['events'])) {
     }
 }
 echo "OK1";
-header('Location: http://casinopanels.com/services/testApi.php');
+
