@@ -11,7 +11,8 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 function regPlay($uid){
 //   $uid="U1cc479767864cf8c57629e6b1623e2f6";
-  $url = 'https://api.line.me/v2/bot/profile/'.this.$uid;
+  $userId=(string)$uid;
+  $url = 'https://api.line.me/v2/bot/profile/'.$userId;
   $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
@@ -34,9 +35,9 @@ function regPlay($uid){
 //   header('Location: http://www.casinopanels.com/services/api.php?func=addUser&user='.$u_id.'&name='.$name.'&urlpic='.$urlpic.'&statMsg='.$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $name=$name."null";
-  $user=$name."\nuserId : ".$uid;
+  $user=$name."\nuserId : ".$userId;
   return $user;
   
 }
-echo "2";
+echo "1";
 ?>
