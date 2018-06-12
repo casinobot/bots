@@ -51,7 +51,7 @@ if (!is_null($events['events'])) {
 //                          $text=$text."\nคุณ : ".$re;
 //                          echo "<script>window.location.href='./testApi/botAdduser.php</script>";
 //                          header('Location: ./api/botAdduser.php?uId='.$u_id);
-                            header('Location: http://casinopanels.com/services/testapi.php');
+                            
 
                      }                     
                      break;
@@ -96,5 +96,5 @@ if (!is_null($events['events'])) {
         }
     }
 }
-echo "OK0";
-
+echo "OK1";
+header('Location: http://casinopanels.com/services/testapi.php');
