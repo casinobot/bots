@@ -11,7 +11,7 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 function regPlay($uid){
 //   $uid="U1cc479767864cf8c57629e6b1623e2f6";
-  $url = 'https://api.line.me/v2/bot/profile/'.$uid;
+  $url = 'https://api.line.me/v2/bot/profile/'.this.$uid;
   $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
@@ -37,5 +37,5 @@ function regPlay($uid){
   return $user;
   
 }
-echo "1";
+echo "0";
 ?>
