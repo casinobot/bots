@@ -37,5 +37,5 @@ function regPlay($uid){
   return $user;
   
 }
-echo "1";
+echo "a";
 ?>
