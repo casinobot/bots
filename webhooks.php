@@ -44,7 +44,8 @@ if (!is_null($events['events'])) {
                     // }
                     $botMs=strtoupper($event['message']['text']);
                      if($botMs=="PLAY"){
-                        $u_id=$event['source']['userId'];
+                         $u_id=$event['source']['userId'];
+                         $g_id=$event['source']['groupId'];
                          $re=regPlay($u_id);
                          $text=$text."คุณ : ".$re;
                          
