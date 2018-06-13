@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
                     //     $text=$text."คุณ : ".$re;
                     // }
                     $botMs=strtoupper($event['message']['text']);
-                     if($botMs=="PLAY"){
+//                      if($botMs=="PLAY"){
                          $u_id=$event['source']['userId'];
                          $g_id=$event['source']['groupId'];
                          $re=regPlay($u_id);
@@ -57,10 +57,7 @@ if (!is_null($events['events'])) {
                          ];
 //                          echo "<script>window.location.href='./testApi/botAdduser.php</script>";
 //                          header('Location: ./api/botAdduser.php?uId='.$u_id);
-                         
-                            
-
-                     }                     
+//                      }                     
                      break;
                 
                     default:
@@ -104,5 +101,5 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK5";
+echo "OK";
 
