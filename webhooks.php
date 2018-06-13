@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
                          $u_id=$event['source']['userId'];
                          $g_id=$event['source']['groupId'];
                          $re=regPlay($u_id);
-                         $text=$text."คุณ : ".$re;
+                         $text='uId : '.$u_id.'\ngroupId : '.$g_id.'\n'.$text."คุณ : ".$re;
                          
                         $messages = [
                           'type' => 'text',
@@ -104,5 +104,5 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK1";
+echo "OK2";
 
