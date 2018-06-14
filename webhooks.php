@@ -42,7 +42,12 @@ if (!is_null($events['events'])) {
                     }
                     if($botMs=="ON"){
                         $on=addSubRound($u_id);
-                        $text=$on;
+                        $text="เปิด".$on;
+                    }
+
+                    if($botMs=="OFF"){
+                        $on=offSubRound($u_id);
+                        $text="xbf".$on;
                     }
                     if($botMs=="PLAY"){
                         $u_id=$event['source']['userId'];
