@@ -19,65 +19,46 @@ if (!is_null($events['events'])) {
         // Reply only when message sent is in 'text' format
         if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
             // Get text sent
-            // $text = "สวัสดี : ".$event['source']['userId']."-->".$event['message']['text'];
-//             $text="สวัสดี";
             switch ($event['source']['type']) {
                 case 'user':
                  $messages = [
                   'type' => 'text',
-                  // 'text' => $ms
                   'text' => 'userId: '.$event['source']['userId']
                  ];
                  break;
                 case 'room':
                  $messages = [
                   'type' => 'text',
-                  // 'text' => $ms
                   'text' => 'roomId: '.$event['source']['roomId'].' userId: '.$event['source']['userId']
                  ];
                  break;
                 case 'group':
-                    // if($event['message']['text']=="play"){
-                    //     $u_id=$event['source']['userId'];
-                    //     $re=regPlay($u_id);
-                    //     $text=$text."คุณ : ".$re;
-                    // }
                     $botMs=strtoupper($event['message']['text']);
-//                      if($botMs=="PLAY"){
-                         $u_id=$event['source']['userId'];
-                         $g_id=$event['source']['groupId'];
-                         $re=regPlay($u_id);
-                         $text="uId : ".$u_id."\ngroupId : ".$g_id."\nName : ".$re; //.$text."คุณ : ".$re;
-                         
-                        $messages = [
-                          'type' => 'text',
-                          'text' => $text
-                          // 'text' => $ms
-//                           'text' => 'groupId: '.$event['source']['groupId']
-                         ];
-//                          echo "<script>window.location.href='./testApi/botAdduser.php</script>";
-//                          header('Location: ./api/botAdduser.php?uId='.$u_id);
-//                      }                     
-                     break;
-                
-                    default:
-                 # code...
+                    if($botMs=="PLAY"){
+                        $u_id=$event['source']['userId'];
+                        $g_id=$event['source']['groupId'];
+                        $re=regPlay($u_id);
+                        $text="uId : ".$u_id."\ngroupId : ".$g_id."\nName : ".$re; //.$text."คุณ : ".$re;
+                        
+                    }
+                    if($botMs[0]=="T"){
+                        $tang=split("-", $botMs);
+                        $text="[0]=".$tang[0]."\n[1]".$tang[1];
+
+                    }                                         
+                    break;                
+                default:
                  break;                 
              }
-
-            // $text="สวัสดี";
-//          $a_n="Aone";
-//          $re=regPlay($a_n);
-//          $text=$text."คุณ : ".$re;
             
             // Get replyToken
-            $replyToken = $event['replyToken'];
-            // Build message to reply back
-            // $messages = [
-            //     'type' => 'text',
-            //     'text' => $text
-            // ];
-
+            $replyToken = $event['replyToken'];             
+            $messages = [
+              'type' => 'text',
+              'text' => $text
+              // 'text' => $ms
+              // 'text' => 'groupId: '.$event['source']['groupId']
+             ];
             // Make a POST Request to Messaging API to reply to sender
             $url = 'https://api.line.me/v2/bot/message/reply';
             $data = [
@@ -101,5 +82,5 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK";
+echo "OK0";
 
