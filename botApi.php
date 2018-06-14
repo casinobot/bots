@@ -65,10 +65,35 @@ function addRound($uId){
     $numRound=$numRound+1;
     $rName="เกมส์ที่".$numRound;
     /*$sqlAddRound="INSERT into tb_round values(null,'$rName',0,0,0,$date)";
-    $queryRound=mysqli_query($con,$selecetRound);*/
+    $queryRound=mysqli_query($con,$sqlAddRound);*/
     return $rName;
   }
 
 }
-echo "bot Api1<br>";
+function addSubRound($uId){
+  date_default_timezone_set("Asia/Bangkok");
+  $date=date("Y-m-d H:i:s");
+  // global $con;
+  // $selectUser="SELECT * from tb_Admin where admin_token='$uId'";
+  // $queryUser=mysqli_query($con,$selectUser);
+  // $numUser=$queryUser->num_rows;
+  $numUser=1;
+  if($numUser>0){
+    $numSubRound=0;
+    // $selecetRound="SELECT * from tb_round order by round_id desc";
+    // $queryRound=mysqli_query($con,$selecetRound);
+    // $rowRound=mysqli_fetch_array($queryRound);
+
+    // $selecetSubRound="SELECT * from tb_subround";
+    // $querySubRound=mysqli_query($con,$selecetSubRound);
+    // $numUser=$queryUser->num_rows;
+    $numSubRound=$numSubRound+1;
+    $rSName="รอบที่ที่".$numSubRound;
+    /*$sqlAddSubRound="INSERT into tb_subround values(null,'$rSName',0,0,0,$date,'on',$rowRound[round_id])";
+    $querySubRound=mysqli_query($con,$sqlAddSubRound);*/
+    return $rSName;
+  }
+
+}
+echo "bot Api5<br>";
 ?>
