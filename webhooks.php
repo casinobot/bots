@@ -55,11 +55,29 @@ if (!is_null($events['events'])) {
                            else if($tang[0][$i-1]==3) $t3=$tang[1];
                            else if($tang[0][$i-1]==4) $t4=$tang[1];
                         }
-                        if($t1!=0) $text="คุณ ".$name." แทงขา t1";
-                        if($t2!=0) $text=$text.",t2";
-                        if($t3!=0) $text=$text.",t3";
-                        if($t4!=0) $text=$text.",t4";
-                        $text=$text." ขาล่ะ".$tang[1]." บาท";
+                        $totalMon=0;
+                        if($t1!=0) {
+                            $totalMon+=$t1;
+                            $text="คุณ ".$name." แทงขา t1";
+                        }
+                        if($t2!=0){
+                            $totalMon+=$t2;
+                            $text=$text.",t2";
+                        } 
+                        if($t3!=0){
+                            $totalMon+=$t3;
+                            $text=$text.",t3";
+                        } 
+                        if($t4!=0){
+                            $totalMon+=$t4;
+                            $text=$text.",t4";
+                        }                         
+                        $checKMoney=checkMoney($u_id);
+                        if($checkMoney>=$totalMon){
+                            $text=$text." ขาล่ะ ".$tang[1]." บาท\nยอดเงินคงเหลือ ณ ปัจจุบัน ".$checkMoney." บาท";
+                        } 
+                        else $text="คุณ ".$name." มียอดเงินคงเหลือไม่เพียงพอสำหรับการแทง"
+                        
                         // .$t1."\nt2 : ".$t2."\nt3 : ".$t3."\nt4 : ".$t4;
                     }                                         
                     break;                
