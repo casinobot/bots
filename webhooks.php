@@ -42,6 +42,10 @@ if (!is_null($events['events'])) {
                         
                     }
                     if($botMs[0]=="T"){
+                        $t1=0;
+                        $t2=0;
+                        $t3=0;
+                        $t4=0;
                         $tang=explode("-", $botMs);
                         for ($i=strlen($tang[0]); $i >0 ; $i--) { 
                            if($tang[0][$i-1]==1) $t1=$tang[1];
@@ -87,5 +91,4 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK5";
-
+echo "OK";
