@@ -74,11 +74,11 @@ if (!is_null($events['events'])) {
                         }                         
                         $checKMoney=checkMoney($u_id);
                         if($checKMoney>=$totalMon){
-                            $text=$text." ขาล่ะ ".$tang[1]." บาท\nยอดเงินคงเหลือ ณ ปัจจุบัน ".$checkMoney." บาท";
+                            $text=$text." ขาล่ะ ".$tang[1]." บาท\nยอดเงินคงเหลือ ณ ปัจจุบัน ".$checKMoney." บาท";
 
                         } 
                         else $text="คุณ ".$name." มียอดเงินคงเหลือไม่เพียงพอสำหรับการแทง";
-                        $text=$text."\n".$totalMon."\n".$checKMoney."\nchecKMoney=".gettype($checKMoney)."\ntotalMon=".gettype($totalMon);
+                        // $text=$text."\n".$totalMon."\n".$checKMoney."\nchecKMoney=".gettype($checKMoney)."\ntotalMon=".gettype($totalMon);
                         // .$t1."\nt2 : ".$t2."\nt3 : ".$t3."\nt4 : ".$t4;
                     }                                         
                     break;                
@@ -117,4 +117,4 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK0";
+echo "OK";
