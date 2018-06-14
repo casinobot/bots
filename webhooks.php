@@ -72,12 +72,12 @@ if (!is_null($events['events'])) {
                             $totalMon+=$t4;
                             $text=$text.",t4";
                         }                         
-                        $checKMoney=checkMoney($u_id);
-                        if($checkMoney>=$totalMon){
-                            $text=$text." ขาล่ะ ".$tang[1]." บาท\nยอดเงินคงเหลือ ณ ปัจจุบัน ".$checkMoney." บาท";
+                        // $checKMoney=checkMoney($u_id);
+                        // if($checkMoney>=$totalMon){
+                        //     $text=$text." ขาล่ะ ".$tang[1]." บาท\nยอดเงินคงเหลือ ณ ปัจจุบัน ".$checkMoney." บาท";
 
-                        } 
-                        else $text="คุณ ".$name." มียอดเงินคงเหลือไม่เพียงพอสำหรับการแทง";
+                        // } 
+                        // else $text="คุณ ".$name." มียอดเงินคงเหลือไม่เพียงพอสำหรับการแทง";
                         $text="test";
                         // .$t1."\nt2 : ".$t2."\nt3 : ".$t3."\nt4 : ".$t4;
                     }                                         
