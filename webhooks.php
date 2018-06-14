@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
 
                     if($botMs=="OFF"){
                         $on=offSubRound($u_id);
-                        $text="xbf".$on;
+                        $text="ปิด".$on;
                     }
                     if($botMs=="PLAY"){
                         $u_id=$event['source']['userId'];
