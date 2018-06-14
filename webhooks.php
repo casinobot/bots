@@ -19,6 +19,8 @@ if (!is_null($events['events'])) {
         // Reply only when message sent is in 'text' format
         if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
             // Get text sent
+            $u_id=$event['source']['userId'];
+            $name=regPlay($u_id);
             switch ($event['source']['type']) {
                 case 'user':
                  $messages = [
@@ -38,23 +40,27 @@ if (!is_null($events['events'])) {
                         $u_id=$event['source']['userId'];
                         $g_id=$event['source']['groupId'];
                         $re=regPlay($u_id);
-                        $text="uId : ".$u_id."\ngroupId : ".$g_id."\nName : ".$re; //.$text."คุณ : ".$re;
-                        
+                        $text="uId : ".$u_id."\ngroupId : ".$g_id."\nName : ".$re; //.$text."คุณ : ".$re;                        
                     }
                     if($botMs[0]=="T"){
                         $t1=0;
                         $t2=0;
                         $t3=0;
                         $t4=0;
-                        // $tang=explode("-", $botMs);
-                        $tang=split("-", $botMs);
+                        $tang=explode("-", $botMs);
+                        // $tang=split("-", $botMs);
                         for ($i=strlen($tang[0]); $i >0 ; $i--) { 
                            if($tang[0][$i-1]==1) $t1=$tang[1];
                            else if($tang[0][$i-1]==2) $t2=$tang[1];
                            else if($tang[0][$i-1]==3) $t3=$tang[1];
                            else if($tang[0][$i-1]==4) $t4=$tang[1];
                         }
-                        $text="t1 : ".$t1."\nt2 : ".$t2."\nt3 : ".$t3."\nt4 : ".$t4;
+                        if($t1!=0) $text="คุณ ".$name."แทงขา t1";
+                        if($t2!=0) $text=$text.",t2";
+                        if($t3!=0) $text=$text.",t3";
+                        if($t4!=0) $text=$text.",t4";
+                        $text=$text." ขาล่ะ".$tang[1];
+                        // .$t1."\nt2 : ".$t2."\nt3 : ".$t3."\nt4 : ".$t4;
                     }                                         
                     break;                
                 default:
@@ -92,4 +98,4 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK2";
+echo "OK";
