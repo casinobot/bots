@@ -30,12 +30,12 @@ function regPlay($uid){
   $name=$jsuser['displayName'];
   $urlpic=$jsuser['pictureUrl'];
   $statMsg=$jsuser['statusMessage'];
-  addUser($u_id,$name,$urlpic,$statMsg);
+//   addUser($u_id,$name,$urlpic,$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $user=$name;
   return $user;
   
 }
 
-echo "bot Api<br>";
+echo "bot Api1<br>";
 ?>
