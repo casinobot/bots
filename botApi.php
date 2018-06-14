@@ -37,13 +37,13 @@ function regPlay($uid){
   
 }
 checkMoney($uId){
-  global $con;
-  $selectUser="SELECT * from tb_user where user_token='$user'";
-  $queryUser=mysqli_query($con,$selectUser);
-  $rowUser=mysqli_fetch_array($queryUser);
-  $selectAcc="SELECT * from tb_account where user_id='$rowUser[user_id]'";
-  $queryAcc=mysqli_query($con,$selectAcc);
-  $rowAcc=mysqli_fetch_array($queryAcc);
+  // global $con;
+  // $selectUser="SELECT * from tb_user where user_token='$user'";
+  // $queryUser=mysqli_query($con,$selectUser);
+  // $rowUser=mysqli_fetch_array($queryUser);
+  // $selectAcc="SELECT * from tb_account where user_id='$rowUser[user_id]'";
+  // $queryAcc=mysqli_query($con,$selectAcc);
+  // $rowAcc=mysqli_fetch_array($queryAcc);
   // $money=$rowAcc['account_total'];
   $money=100;
   return $money;
