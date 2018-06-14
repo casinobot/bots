@@ -43,7 +43,16 @@ if (!is_null($events['events'])) {
                     }
                     if($botMs[0]=="T"){
                         $tang=split("-", $botMs);
-                        $text="[0]=".$tang[0][1]."\n[1]".$tang[1];
+                        // $text="[0]=".$tang[0][1]."\n[1]".$tang[1];
+                        // $t1,$t2,$t3,$t4;
+                        for ($i=strlen($tang[0]) $i >1 ; $i--) { 
+                           if($tang[0][$i]==1)$t1=$tang[1];
+                           else if($tang[0][$i]==2)$t2=$tang[1];
+                           else if($tang[0][$i]==3)$t3=$tang[1];
+                           else if($tang[0][$i]==4)$t4=$tang[1];
+                           $text="t1 : ".$t1."\nt2 : ".$t2."\nt3 : ".$t3."\nt4 : ".$t4;
+                        }
+
 
                     }                                         
                     break;                
@@ -82,5 +91,5 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK";
+echo "OK1";
 
