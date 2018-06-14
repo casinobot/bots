@@ -73,7 +73,7 @@ if (!is_null($events['events'])) {
                             $text=$text.",t4";
                         }                         
                         $checKMoney=checkMoney($u_id);
-                        if($checkMoney>=$totalMon){
+                        if((int)$checKMoney-(int)$totalMon>=0){
                             $text=$text." ขาล่ะ ".$tang[1]." บาท\nยอดเงินคงเหลือ ณ ปัจจุบัน ".$checkMoney." บาท";
 
                         } 
@@ -117,4 +117,4 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK3";
+echo "OK1";
