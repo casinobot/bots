@@ -36,6 +36,10 @@ if (!is_null($events['events'])) {
                  break;
                 case 'group':
                     $botMs=strtoupper($event['message']['text']);
+                    if($botMs=="OPEN"){
+                        $op=addRound($u_id);
+                        $text=$op;
+                    }
                     if($botMs=="PLAY"){
                         $u_id=$event['source']['userId'];
                         $g_id=$event['source']['groupId'];
