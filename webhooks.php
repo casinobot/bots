@@ -40,6 +40,10 @@ if (!is_null($events['events'])) {
                         $op=addRound($u_id);
                         $text=$op;
                     }
+                    if($botMs=="ON"){
+                        $on=addSubRound($u_id);
+                        $text=$on;
+                    }
                     if($botMs=="PLAY"){
                         $u_id=$event['source']['userId'];
                         $g_id=$event['source']['groupId'];
