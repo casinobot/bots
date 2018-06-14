@@ -36,7 +36,7 @@ function regPlay($uid){
   return $user;
   
 }
-echeckMoney($uId){
+checkMoney($uId){
   global $con;
   $selectUser="SELECT * from tb_user where user_token='$user'";
   $queryUser=mysqli_query($con,$selectUser);
