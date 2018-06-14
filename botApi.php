@@ -30,7 +30,7 @@ function regPlay($uid){
   $name=$jsuser['displayName'];
   $urlpic=$jsuser['pictureUrl'];
   $statMsg=$jsuser['statusMessage'];
-//   addUser($u_id,$name,$urlpic,$statMsg);
+  // addUser($u_id,$name,$urlpic,$statMsg);
 /*---------------------  เอาค่าใน $jsuser ลง DB  --------------------*/
   $user=$name;
   return $user;
@@ -38,7 +38,7 @@ function regPlay($uid){
 }
 function checkMoney($uId){
   /*global $con;
-  $selectUser="SELECT * from tb_user where user_token='$user'";
+  $selectUser="SELECT * from tb_user where user_token='$uId'";
   $queryUser=mysqli_query($con,$selectUser);
   $rowUser=mysqli_fetch_array($queryUser);
   $selectAcc="SELECT * from tb_account where user_id='$rowUser[user_id]'";
@@ -49,5 +49,26 @@ function checkMoney($uId){
   return $money;
   // $numAcc=$queryAcc->num_rows;
 }
-echo "bot Api<br>";
+function addRound($uId){
+  date_default_timezone_set("Asia/Bangkok");
+  $date=date("Y-m-d H:i:s");
+  // global $con;
+  // $selectUser="SELECT * from tb_Admin where admin_token='$uId'";
+  // $queryUser=mysqli_query($con,$selectUser);
+  // $numUser=$queryUser->num_rows;
+  $numUser=1;
+  if($numUser>0){
+    $numRound=0;
+    // $selecetRound="SELECT * from tb_round";
+    // $queryRound=mysqli_query($con,$selecetRound);
+    // $numRound=$queryRound->num_rows;
+    $numRound=$numRound+1;
+    $rName="เกมส์ที่".$numRound;
+    /*$sqlAddRound="INSERT into tb_round values(null,'$rName',0,0,0,$date)";
+    $queryRound=mysqli_query($con,$selecetRound);*/
+    return $rName;
+  }
+
+}
+echo "bot Api1<br>";
 ?>
