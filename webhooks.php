@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
                     }
                     if($botMs[0]=="T"){
                         $tang=split("-", $botMs);
-                        $text="[0]=".$tang[0]."\n[1]".$tang[1];
+                        $text="[0]=".$tang[0][1]."\n[1]".$tang[1];
 
                     }                                         
                     break;                
@@ -82,5 +82,5 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK0";
+echo "OK";
 
