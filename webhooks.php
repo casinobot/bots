@@ -40,7 +40,8 @@ if (!is_null($events['events'])) {
                         $u_id=$event['source']['userId'];
                         $g_id=$event['source']['groupId'];
                         $re=regPlay($u_id);
-                        $text="uId : ".$u_id."\ngroupId : ".$g_id."\nName : ".$re; //.$text."คุณ : ".$re;                        
+                        // $text="uId : ".$u_id."\ngroupId : ".$g_id."\nName : ".$re; //.$text."คุณ : ".$re;
+                        $text="สวัสดีคุณ ".$re." ขอให้สนุกกับการเล่น";                        
                     }
                     if($botMs[0]=="T"){
                         $t1=0;
@@ -77,7 +78,7 @@ if (!is_null($events['events'])) {
                             $text=$text." ขาล่ะ ".$tang[1]." บาท\nยอดเงินคงเหลือ ณ ปัจจุบัน ".$checKMoney." บาท";
 
                         } 
-                        else $text="คุณ ".$name." มียอดเงินคงเหลือไม่เพียงพอสำหรับการแทง";
+                        else $text="คุณ ".$name." มียอดเงินคงเหลือไม่เพียงพอสำหรับการแทง\nยอดเงินคงเหลือ ณ ปัจจุบัน ".$checKMoney." บาท";
                         // $text=$text."\n".$totalMon."\n".$checKMoney."\nchecKMoney=".gettype($checKMoney)."\ntotalMon=".gettype($totalMon);
                         // .$t1."\nt2 : ".$t2."\nt3 : ".$t3."\nt4 : ".$t4;
                     }                                         
