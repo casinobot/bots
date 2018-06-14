@@ -75,9 +75,10 @@ if (!is_null($events['events'])) {
                         $checKMoney=checkMoney($u_id);
                         if($checkMoney>=$totalMon){
                             $text=$text." ขาล่ะ ".$tang[1]." บาท\nยอดเงินคงเหลือ ณ ปัจจุบัน ".$checkMoney." บาท";
+
                         } 
                         else $text="คุณ ".$name." มียอดเงินคงเหลือไม่เพียงพอสำหรับการแทง";
-                        
+                        $text="test";
                         // .$t1."\nt2 : ".$t2."\nt3 : ".$t3."\nt4 : ".$t4;
                     }                                         
                     break;                
@@ -116,4 +117,4 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK2";
+echo "OK";
