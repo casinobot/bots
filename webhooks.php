@@ -78,7 +78,7 @@ if (!is_null($events['events'])) {
 
                         } 
                         else $text="คุณ ".$name." มียอดเงินคงเหลือไม่เพียงพอสำหรับการแทง";
-                        // $text="test";
+                        $text=$text."\n".$totalMon;
                         // .$t1."\nt2 : ".$t2."\nt3 : ".$t3."\nt4 : ".$t4;
                     }                                         
                     break;                
@@ -117,4 +117,4 @@ if (!is_null($events['events'])) {
     
     
 }
-echo "OK0";
+echo "OK";
